@@ -1,0 +1,1 @@
+import Recat, {Component} from "react";

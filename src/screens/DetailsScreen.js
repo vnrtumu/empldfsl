@@ -1,13 +1,18 @@
 import React, {Component}  from 'react';
 import { View, Text } from 'react-native';
 
-export default class DetailsScreen extends Component{
+class DetailsScreen extends Component{
+    static navigationOptions = ({ navigation }) => {
+        const profileName = navigation.getParam('profileName');
+    };
     render(){
         return(
             <View>
-                <Text>Hi i am DetailsScreen screen</Text>
+                <Text>Hi i am DetailsScreen screen {profileName}</Text>
             </View>
         );
     }
 }
+
+export default DetailsScreen;
 
